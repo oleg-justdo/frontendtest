@@ -1,7 +1,5 @@
     # Developer guide
 
-## Branches
-
 
 Venv create
 
@@ -33,6 +31,6 @@ python manage.py migrate
 
 Templates to work in demo_front/templates.
 
-    base - is parent inheritance template
+base - is parent inheritance template
 
-    all specifies in template comments
+all specifies in template comments
