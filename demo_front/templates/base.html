@@ -7,18 +7,66 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-<header>
-    <ul>
-        <a href="{% url "main" %}">
-            <li>MAIN</li>
-        </a>
-        <a href="{% url "page" %}">
-            <li>PAGE</li>
-        </a>
-    </ul>
-    <!-- Реализовать кнопки MAIN,PAGE в хедере помимо существующих в макете.-->
-</header>
-{% block content %}{% endblock %}
+    <header class="header">
+        <div class="header__section">
+            <div class="logo">
+                <a href="/" class="logo__link"></a>
+                <div class="logo__text">Интернет магазин Благой Арт</div>
+            </div>
+            <div class="main-search">
+                <form action="/search" action="POST" class="main-search__form">
+                    <div class="main-search__content">
+                        <input type="text" class="main-search__input">
+                        <button type="submit" class="main-search__submit"></button>
+                    </div>
+                </form>
+            </div>
+            <div class="extra-contacts">
+                <a href="tel:+78007078139">+7(800)707-81-39</a>
+                <div class="extra-contacts__delivery">
+                    <div class="extra-contacts__text--accent">ПН-ПТ с 9:00 до 18:00</div>
+                    <div class="extra-contacts__text">Доставка по РФ и СНГ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__section">
+            <nav class="catalog-menu">
+
+            </nav>
+
+            <nav class="extra-menu">
+                <a href="#" class="extra-menu__link">Условия работы</a>
+                <a href="#" class="extra-menu__link">Скидки</a>
+                <a href="#" class="extra-menu__link">Оплата и доставка</a>
+                <a href="#" class="extra-menu__link">Документы</a>
+                <a href="#" class="extra-menu__link">Контакты</a>
+            </nav>
+
+            <!-- Реализовать кнопки MAIN,PAGE в хедере помимо существующих в макете.-->
+            <nav class="special-menu">
+                <a class="special-menu__link" href="{% url "main" %}">main</a>
+                <a class="special-menu__link" href="{% url "page" %}">page</a>
+            </nav>
+
+            <div class="mini-cart">
+                <div class="mini-cart__count">10</div>
+                <div class="mini-cart__total">
+                    <div class="mini-cart__total-text">56 789</div>
+                    <div class="mini-cart__currency">P</div>
+                </div>
+            </div>
+
+            <nav class="customer-menu">
+                <a href="#" class="customer-menu__link customer-menu__login">Войти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
 <script data-main="{% static 'js/boot.js' %}" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
 </body>
 </html>
