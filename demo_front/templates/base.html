@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 <header>
@@ -17,5 +19,6 @@
     <!-- Реализовать кнопки MAIN,PAGE в хедере помимо существующих в макете.-->
 </header>
 {% block content %}{% endblock %}
+<script data-main="{% static 'js/boot.js' %}" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
 </body>
 </html>

@@ -101,6 +101,7 @@ ENV/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 .idea/
+.DS_Store
 
 # User-specific stuff:
 .idea/**/workspace.xml
@@ -155,3 +156,7 @@ pyvenv.cfg
 pip-selfcheck.json
 static/img/
 src/celery*
+
+# Frontend
+node_modules/
+*.css.map
