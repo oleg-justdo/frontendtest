@@ -29,7 +29,10 @@ define([ 'jquery', 'underscore', 'text!tpl/popup.html' ], function ( $, _, popup
 
 	    Popup.prototype.render = function( data, dest )
 	    {
-	    	var popup = $( this.template( { content: data } ) ).appendTo( dest );
+	    	var popup = $( this.template({
+	    		content: data,
+	    		type: this.options.type ? '--' + this.options.type : '',
+	    	})).appendTo( dest );
 
 	    	this.registerEvents( popup );
 	    };

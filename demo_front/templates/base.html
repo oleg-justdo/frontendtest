@@ -10,19 +10,20 @@
     <header class="header">
         <div class="header__section">
             <div class="logo">
-                <a href="/" class="logo__link"></a>
-                <div class="logo__text">Интернет магазин Благой Арт</div>
+                <a href="/" class="logo__link">
+                    <span class="logo__text">Интернет магазин Благой Арт</span>
+                </a>
             </div>
             <div class="main-search">
                 <form action="/search" action="POST" class="main-search__form">
                     <div class="main-search__content">
-                        <input type="text" class="main-search__input">
+                        <input type="text" class="main-search__input" placeholder="Введите название или артикул">
                         <button type="submit" class="main-search__submit"></button>
                     </div>
                 </form>
             </div>
             <div class="extra-contacts">
-                <a href="tel:+78007078139">+7(800)707-81-39</a>
+                <a class="extra-contacts__phone" href="tel:+78007078139">+7(800)707-81-39</a>
                 <div class="extra-contacts__delivery">
                     <div class="extra-contacts__text--accent">ПН-ПТ с 9:00 до 18:00</div>
                     <div class="extra-contacts__text">Доставка по РФ и СНГ</div>
@@ -30,7 +31,7 @@
             </div>
         </div>
 
-        <div class="header__section">
+        <div class="header__section header__section--stratch">
             <nav class="catalog-menu">
 
             </nav>
@@ -52,7 +53,8 @@
             <div class="mini-cart">
                 <div class="mini-cart__count">10</div>
                 <div class="mini-cart__total">
-                    <div class="mini-cart__total-text">56 789</div>
+                    <div class="mini-cart__text">товаров</div>
+                    <div class="mini-cart__total-currency">56 789</div>
                     <div class="mini-cart__currency">P</div>
                 </div>
             </div>

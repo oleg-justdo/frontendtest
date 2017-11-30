@@ -49,7 +49,7 @@ define([ 'jquery', 'underscore', 'popup' ], function ( $, _, Popup ) {
 
 	    App.prototype.showNoticeError = function( arr )
 	    {
-	    	( new Popup({}) ).render( arr.toString(), $( 'body' ) );
+	    	( new Popup({type: 'error'}) ).render( arr.toString(), $( 'body' ) );
 	    };
 
 	    App.prototype.parseForm = function( form )

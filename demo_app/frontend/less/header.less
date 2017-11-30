@@ -1,0 +1,68 @@
+.header {
+	width: 1200px;
+	margin: 0 auto;
+
+	&__section {
+		&:extend( .clearfix all );
+		border-bottom: 1px solid #eee;
+		padding: 22px 0;
+	}
+
+	&__section--stratch {
+		text-align: justify;
+		line-height: 0;
+		&:after {
+			display: inline-block;
+			content: "";
+			width: 100%;
+		}
+	}
+
+	.logo,
+	.main-search {
+		float: left;
+	}
+
+	.main-search {
+		margin-left: 60px;
+		width: 500px;
+	}
+
+	.extra-contacts {
+		float: right;
+	}
+
+	nav,
+	.mini-cart {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		padding-top: 3px;
+	}
+
+}
+
+.catalog-menu {
+	.catalog-menu();
+}
+.customer-menu {
+	.customer-menu();
+}
+.extra-contacts {
+	.extra-contacts();
+}
+.extra-menu {
+	.extra-menu();
+}
+.logo {
+	.logo();
+}
+.main-search {
+	.main-search();
+}
+.mini-cart {
+	.mini-cart();
+}
+.special-menu {
+	.special-menu();
+}

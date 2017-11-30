@@ -1,0 +1,41 @@
+.popup() {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50% );
+	background-color: fade(#000, 50);
+	border-radius: 4px;
+	padding: 20px;
+	color: #fff;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+	width: 30%;
+
+	&__close {
+		position: absolute;
+		right: -12px;
+		top: -12px;
+		font-variant: small-caps;
+		cursor: pointer;
+		&:hover {
+			color: @accent-color;
+		}
+	}
+
+	&__header {
+		position: relative;
+		padding-bottom: 5px;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-top: 1px solid fade(#fff, 20);
+			border-bottom: 1px solid fade(#000, 5);
+		}
+	}
+
+	&__content {
+		padding-top: 5px;
+	}
+}
