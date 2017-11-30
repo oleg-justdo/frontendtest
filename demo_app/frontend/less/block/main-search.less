@@ -29,9 +29,13 @@
 
 	&__submit {
 		width: @main-search__submit-width;
-		background: #888;
 		position: absolute;
 		right: 0;
 		top: 0;
+		&:before {
+			&:extend( .ico );
+			content: @ico-search;
+			font-size: 18px;
+		}
 	}
 }

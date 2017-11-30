@@ -13,6 +13,9 @@ gulp.task('less', function() {
         .pipe( sourcemaps.init() )
         	.pipe(rename('styles.less'))
         	.pipe(less())
+        	.on('error', function ( err ) {
+        		console.log( err );
+        	})
         .pipe(sourcemaps.write())
         .pipe(gulp.dest( cssDest ))
         .pipe(livereload());

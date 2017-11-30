@@ -1,0 +1,21 @@
+.img(
+	@file-path,
+	@file-name,
+	@width: auto,
+	@height: auto,
+	@retina: none )
+{
+    background-image: url("@{file-path}@{file-name}");
+    background-repeat: no-repeat;
+    background-size: @width @height;
+    width: @width;
+    height: @height;
+
+    & when ( @retina = on ) {
+		@img-retina_file: ~`@{file-name}.replace(/\.\w+$/, function(match) { return "@2x" + match; })`;
+
+	    .retina & {
+	        background-image: url("@{file-path}@{img-retina_file}");
+	    }
+    }
+}
