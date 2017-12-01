@@ -6,8 +6,10 @@ require.config({
 		domReady: ['//cdnjs.cloudflare.com/ajax/libs/require-domReady/2.0.1/domReady'],
 
 		app: ['app'],
-		popup: ['popup'],
-		timer: ['timer'],
+		popup: 'popup',
+		timer: 'timer',
+		switch: 'switch',
+		form: 'form'
 	},
 	shim: {
 		app: {

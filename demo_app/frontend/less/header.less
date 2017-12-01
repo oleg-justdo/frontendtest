@@ -3,17 +3,18 @@
 	&:extend( .clearfix all );
 
 	@media @device-sm {
-		width: 768px;
+		width: @screen-sm;
 		padding: 0 15px;
 	}
 
 	@media @device-md-min {
-		width: 1024px;
+		width: @screen-md;
 		padding: 0 20px;
 	}
 
 	@media @device-lg-min {
-		width: 1200px;
+		padding: 0 69px;
+		width: @screen-lg;
 	}
 
 	margin: 0 auto;
@@ -22,13 +23,14 @@
 		&:extend( .clearfix all );
 		position: relative;
 		border-bottom: 1px solid #eee;
-		padding: 22px 0;
+		padding: 22px 0 10px;
 	}
 
 	&__section--stratch {
 		@media @device-lg-min {
 			text-align: justify;
 			line-height: 0;
+			padding-top: 14px;
 			&:after {
 				display: inline-block;
 				content: "";
@@ -53,8 +55,9 @@
 			width: 330px;
 		}
 		@media @device-lg-min {
-			width: 500px;
-			margin-left: 60px;
+			width: 496px;
+			margin-left: 40px;
+			margin-top: -7px;
 		}
 	}
 

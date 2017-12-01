@@ -3,9 +3,18 @@
 	font-weight: bold;
 	color: @text-color;
 	text-transform: uppercase;
+	&:before {
+		&:extend( .ico );
+		font-size: 22px;
+		content: @ico-cart;
+		color: @accent-color;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
 	& * {
 		display: inline-block;
 	}
+
 
 	&__count {
 		background-color: @accent-color;

@@ -1,6 +1,16 @@
 .customer-menu() {
+	&:before {
+		&:extend( .ico );
+		content: @ico-user;
+		font-size: 20px;
+		color: @accent-color;
+		vertical-align: middle;
+		margin-top: -2px;
+	}
 	&__link {
 		.menu-link();
+		vertical-align: middle;
+		margin-left: 10px;
 	}
 
 	&__login {
