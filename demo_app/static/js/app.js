@@ -13,7 +13,15 @@ define([ 'jquery', 'underscore', 'popup' ], function ( $, _, Popup ) {
 	    // methods
 	    App.prototype.init = function ()
 	    {
+	        var initialTime = $('#timer').data( 'time' );
 	        _.bindAll( this, 'ajaxResponseHandle' );
+
+	        if( initialTime )
+	        {
+	        	require( ['timer'], function ( Timer ) {
+	        		new Timer( {time: initialTime, el: $( '#timer' )} );
+	        	})
+	        }
 
 	        this.registerEvents();
 	    };
@@ -29,7 +37,21 @@ define([ 'jquery', 'underscore', 'popup' ], function ( $, _, Popup ) {
 	    		var url = $( this ).attr( 'action' );
 
 	    		_this.ajaxRequest( url , data ).done( _this.ajaxResponseHandle );
-	    	})
+	    	});
+
+	    	$( '.catalog-menu' ).on('click', function (ev) {
+	    		$( this ).toggleClass( 'active--js' );
+
+		    	$( 'body' ).on( 'click', function () {
+		    		if( $( '.catalog-menu' ).hasClass('active--js') )
+		    		{
+		    			$('.catalog-menu').toggleClass( 'active--js' );
+		    		}
+		    	})
+	    		return false;
+	    	});
+
+
 	    };
 
 	    App.prototype.ajaxResponseHandle = function( data )

@@ -3,9 +3,11 @@ require.config({
 		jquery: ['//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min'],
 		underscore: ['//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min'],
 		text: ['//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min'],
+		domReady: ['//cdnjs.cloudflare.com/ajax/libs/require-domReady/2.0.1/domReady'],
 
 		app: ['app'],
 		popup: ['popup'],
+		timer: ['timer'],
 	},
 	shim: {
 		app: {
@@ -14,7 +16,7 @@ require.config({
 	}
 });
 
-require( ['app'], function ( App ) {
+require( ['app', 'domReady'], function ( App ) {
 	new App({
 		slider: '.slider',
 		form: 'form'

@@ -1,5 +1,122 @@
-.catalog-menu() {
-	&__item {
+@catalog-menu__border-color: lightgray;
+@catalog-menu__border-radius: 3px;
+@catalog-menu__item-bgc--hover: lightgray;
 
+.catalog-menu() {
+	position: relative;
+	&.active--js {
+		& > .catalog-menu__list {
+			transition: opacity .3s ease-in-out;
+			visibility: visible;
+			opacity: 1;
+		}
 	}
+	& > &__list {
+		visibility: hidden;
+		opacity: 0;
+		top: 60px;
+	}
+	&__title {
+		.menu-link();
+		cursor: pointer;
+		&:hover {
+			color: @text-color;
+		}
+		&:before,
+		&:after {
+			&:extend( .ico );
+			color: @accent-color;
+			font-size: 12px;
+		}
+
+		&:before {
+			content: @ico-list;
+			margin-right: 5px;
+		}
+		&:after {
+			content: @ico-chevron-down;
+			margin-left: 5px;
+			vertical-align: top;
+			.active--js & {
+				content: @ico-chevron-up;
+			}
+		}
+	}
+	&__list {
+		position: absolute;
+		background-color: #fff;
+		padding: 10px 0;
+		border: 1px solid @catalog-menu__border-color;
+		border-radius: @catalog-menu__border-radius;
+		width: 250px;
+	}
+	&__list &__list {
+		position: static;
+		border: none;
+		border-radius: 0;
+	}
+
+	&__item {
+		position: relative;
+		list-style-type: none;
+		color: @accent-color;
+		padding: 7px 10px 7px 24px;
+		cursor: pointer;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 3px;
+			height: 3px;
+			border-radius: 100%;
+			border: 1px solid @accent-color;
+			left: 10px;
+			top: 12px;
+		}
+		&:hover {
+			background-color: @catalog-menu__item-bgc--hover;
+			.catalog-menu__childs {
+				transition: opacity .3s ease-in-out;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__item--parent {
+		&:after {
+			position: absolute;
+			&:extend( .ico );
+			content: @ico-chevron-right;
+			color: @accent-color;
+			right: 10px;
+			top: 9px;
+			font-size: 12px;
+		}
+	}
+
+	&__link {
+		color: @text-color;
+		vertical-align: top;
+	}
+
+	&__childs {
+		background-color: #fff;
+		position: absolute;
+		left: 101%;
+		top: -12px;
+		padding: 10px 0;
+		border: 1px solid @catalog-menu__border-color;
+		border-radius: @catalog-menu__border-radius;
+		min-width: 250px;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&__childs-title {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-top: 7px;
+		padding-left: 10px;
+	}
+
 }
