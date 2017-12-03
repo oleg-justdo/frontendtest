@@ -1,4 +1,4 @@
-define([ 'jquery', 'underscore', 'form', 'switch' ], function ( $, _, Form, Switch ) {
+define([ 'jquery', 'underscore', 'form', 'switch', 'owl' ], function ( $, _, Form, Switch ) {
 
 	var module = ( function () {
 
@@ -12,7 +12,12 @@ define([ 'jquery', 'underscore', 'form', 'switch' ], function ( $, _, Form, Swit
 	    App.prototype.init = function ()
 	    {
 	        var initialTime = $('#timer').data( 'time' );
-
+	        $( '.slider' ).addClass('owl-theme, owl-carousel').owlCarousel({
+	        	loop: true,
+    			navText: ['', ''],
+    			nav: true,
+	        	items: 1
+	        });
 	        new Switch( { el: '.catalog-menu' } );
 	        new Form({el: 'form'});
 

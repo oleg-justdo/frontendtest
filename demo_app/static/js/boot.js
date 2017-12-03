@@ -4,6 +4,7 @@ require.config({
 		underscore: ['//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min'],
 		text: ['//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min'],
 		domReady: ['//cdnjs.cloudflare.com/ajax/libs/require-domReady/2.0.1/domReady'],
+		owl: ['//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min'],
 
 		app: ['app'],
 		popup: 'popup',
