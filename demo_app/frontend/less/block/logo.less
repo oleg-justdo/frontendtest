@@ -1,13 +1,20 @@
 .logo() {
 	position: relative;
 	padding-bottom: 24px;
+	@media @device-xs {
+		padding-bottom: 0;
+		margin-top: -5px;
+		margin-left: 10px;
+	}
 	&__link {
 		display: inline-block;
 		vertical-align: middle;
 		text-decoration: none;
 		text-indent: -9999px;
-		background: url('../img/logo.png') no-repeat;
 		.img( @img-path, 'logo.png', 250px, 30px, on );
+		@media @device-xs {
+			.img( @img-path, 'logo.png', 250px / 2, 30px / 2, on );
+		}
 	}
 
 	&__text {
@@ -18,5 +25,8 @@
 		left: 0;
 		color: #747688;
 		font-size: 14px;
+		@media @device-xs {
+			display: none;
+		}
 	}
 }

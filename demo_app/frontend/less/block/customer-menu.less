@@ -1,16 +1,23 @@
 .customer-menu() {
-	&:before {
-		&:extend( .ico );
-		content: @ico-user;
-		font-size: 20px;
-		color: @accent-color;
-		vertical-align: middle;
-		margin-top: -2px;
-	}
 	&__link {
 		.menu-link();
 		vertical-align: middle;
 		margin-left: 10px;
+
+		&:before {
+			&:extend( .ico );
+			content: @ico-user;
+			font-size: 20px;
+			color: @accent-color;
+			vertical-align: top;
+			margin-top: -2px;
+		}
+	}
+
+	&__link-text {
+		@media @device-xs-sm {
+			display: none;
+		}
 	}
 
 	&__login {

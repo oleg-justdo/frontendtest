@@ -2,6 +2,44 @@
 	padding: 0 10px;
 	&:extend( .clearfix all );
 
+	@media @device-xs {
+		.logo,
+		.mobile-menu-btn,
+		.catalog-menu,
+		.mini-cart,
+		.special-menu {
+			float: left;
+		}
+
+		.customer-menu {
+			float: right;
+		}
+
+		.extra-contacts {
+			position: absolute;
+			top: 16px;
+			right: 0;
+			&__phone {
+				font-size: 16px;
+			}
+			&__delivery {
+				display: none;
+			}
+		}
+
+		.main-search {
+			width: 100%;
+		}
+
+		.catalog-menu {
+
+		}
+		.mini-cart {
+			margin-left: 60px;
+		}
+
+	}
+
 	@media @device-sm {
 		width: @screen-sm;
 		padding: 0 15px;
@@ -83,19 +121,7 @@
 	}
 
 	@media @device-sm {
-		.extra-menu,
-		.special-menu,
-		.catalog-menu {
-			float: left;
-			width: 75%;
-		}
 
-		.mini-cart,
-		.customer-menu {
-			float: right;
-			width: 25%;
-			clear: right;
-		}
 	}
 
 	@media @device-md {

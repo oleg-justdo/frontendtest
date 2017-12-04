@@ -3,7 +3,7 @@
 
 {% block content %}
     {% include "./slider.html" %}
-    <form action="{% url 'test_submit' %}" method="POST">
+    <form id="test" class="test" action="{% url 'test_submit' %}" method="POST">
         {% csrf_token %}
              {{ form }}
         <button type="submit">DO IT</button>

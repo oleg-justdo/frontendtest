@@ -5,9 +5,17 @@
 	}
 	@media @device-xs {
 		position: fixed;
-		top: 0;
+		top: 54px;
 		width: 100%;
 		left: -100%;
+		z-index: 100;
+		background: #f5f5f5;
+		padding: 10px 19px;
+
+
+		&.active--js{
+			left: 0;
+		}
 		&__link {
 			display: block;
 			margin-left: 0;

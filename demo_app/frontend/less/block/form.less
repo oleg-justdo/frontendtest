@@ -1,16 +1,36 @@
 .form() {
-    width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 3px;
     box-shadow: 0 0 10px fade(#000, .2);
+    overflow: hidden;
+    @media @device-sm-min {
+        width: 30%;
+    }
     label,
     input {
-        display: inline-block;
+        display: block;
+        float: right;
+        padding: 5px 0;
     }
-
-    label {}
-    input {}
+    [type="submit"] {
+        float: right;
+        background-color: @accent-color;
+        padding: 5px 10px;
+        clear: right;
+    }
+    label {
+        float: left;
+        font-size: 12px;
+    }
+    input {
+        border: 1px solid #eee;
+        box-sizing: border-box;
+        text-indent: 5px;
+        clear: right;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
 }
