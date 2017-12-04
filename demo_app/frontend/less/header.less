@@ -43,6 +43,61 @@
 	@media @device-sm {
 		width: @screen-sm;
 		padding: 0 15px;
+
+		.logo {
+			margin-top: 2px;
+		}
+		.extra-menu,
+		.special-menu,
+		.catalog-menu {
+			float: left;
+		}
+
+		.extra-menu,
+		.special-menu {
+			&__link {
+				font-size: 14px;
+				// font-weight: normal;
+			}
+		}
+
+		.special-menu {
+			float: right;
+		}
+
+		.extra-contacts {
+			&__delivery {
+				clear: both;
+			}
+
+			&__phone {
+				font-size: 20px;
+				font-weight: bold;
+			}
+			&__text--accent {
+				margin-top: 0;
+			}
+		}
+
+		.main-search {
+			margin-left: 20px;
+			width: 260px;
+		}
+
+		.customer-menu,
+		.mini-cart {
+			clear: both;
+			float: right;
+			margin-top: 16px;
+		}
+
+		.mini-cart {
+			margin-right: 40px;
+		}
+
+		.customer-menu {
+			margin-top: -20px;
+		}
 	}
 
 	@media @device-md-min {
@@ -83,11 +138,6 @@
 	}
 
 	.main-search {
-		@media @device-sm {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-		}
 		@media @device-md {
 			margin-left: 40px;
 			width: 330px;
