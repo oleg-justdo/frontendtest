@@ -14,6 +14,8 @@ define([ 'jquery', 'underscore', 'form', 'switch', 'owl' ], function ( $, _, For
 	        var initialTime = $('#timer').data( 'time' );
 	        $( '.slider' ).addClass('owl-theme, owl-carousel').owlCarousel({
 	        	loop: true,
+	        	dots: true,
+	        	// dotsData: true,
     			navText: ['', ''],
     			nav: true,
 	        	items: 1

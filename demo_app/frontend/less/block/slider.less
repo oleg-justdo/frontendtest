@@ -1,3 +1,5 @@
+@dots-height: 32px;
+
 .slide() {
     position: relative;
     &__image {
@@ -22,7 +24,7 @@
             left: 37px + 20px;
             color: #fff;
             height: 128px;
-            margin-top: -128px / 2;
+            margin-top: (-128px + @dots-height ) / 2;
             background: fade( @accent-color, 88);
             font-size: 42px;
             padding: 12px 77px 12px 20px;
@@ -50,17 +52,20 @@ form {
 	width: 100%;
     margin: 0 auto;
     overflow: hidden;
+
+
     @media @device-xs {
-        height: 143px;
+        height: 143px + @dots-height;
     }
     @media @device-sm {
-        height: 186px;
+        height: 186px + @dots-height;
     }
     @media @device-md {
-        height: 248px;
+        height: 248px + @dots-height;
+
     }
     @media @device-lg-min {
-        height: 329px;
+        height: 329px + @dots-height;
     }
     .owl-nav {
     }
@@ -113,6 +118,23 @@ form {
         left: 0;
         &:before {
             content: @ico-chevron-left;
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .owl-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background-color: fade(@accent-color, 88);
+        &.active {
+            background-color: @accent-color;
         }
     }
 }
