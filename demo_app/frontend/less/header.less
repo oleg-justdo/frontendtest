@@ -100,6 +100,41 @@
 		}
 	}
 
+	@media @device-md {
+		.catalog-menu {
+			float: left;
+			&__title {
+				&:before {
+					margin-right: 0;
+				}
+				&:after {
+					vertical-align: middle;
+					margin-top: -5px;
+				}
+			}
+			&__title-text {
+				display: none;
+			}
+		}
+
+		.customer-menu,
+		.mini-cart {
+			clear: both;
+			margin-top: -20px;
+		}
+		.mini-cart {
+			margin-right: 24px;
+		}
+
+		.customer-menu {
+			margin-top: -20px;
+			margin-right: 0 !important;
+			&__link-text {
+				display: none;
+			}
+		}
+	}
+
 	@media @device-md-min {
 		width: @screen-md;
 		padding: 0 20px;
@@ -120,6 +155,9 @@
 	}
 
 	&__section--stratch {
+		@media @device-md {
+			padding-top: 10px;
+		}
 		@media @device-lg-min {
 			text-align: justify;
 			line-height: 0;
