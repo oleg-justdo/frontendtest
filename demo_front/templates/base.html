@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/owl.carousel.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
@@ -41,7 +40,7 @@
                 <div class="catalog-menu__title"><div class="catalog-menu__title-text">Каталог товаров</div></div>
                 <ul class="catalog-menu__list">
                     <li class="catalog-menu__item catalog-menu__item--parent">
-                        <a class="catalog-menu__link">Свадебная бижутерия</a>
+                        <span class="catalog-menu__item-title">Свадебная бижутерия</span>
                         <div class="catalog-menu__childs">
                             <div class="catalog-menu__childs-title">Свадебные аксессуары</div>
                             <ul class="catalog-menu__list">
@@ -64,7 +63,7 @@
                         <a class="catalog-menu__link">Броши</a>
                     </li>
                     <li class="catalog-menu__item catalog-menu__item--parent">
-                        <a class="catalog-menu__link">Мужские аксессуары</a>
+                        <span class="catalog-menu__item-title">Мужские аксессуары</span>
                         <div class="catalog-menu__childs">
                             <div class="catalog-menu__childs-title">Мужская бижутерия</div>
                             <ul class="catalog-menu__list">
@@ -125,6 +124,6 @@
         {% block content %}{% endblock %}
     </main>
 
-<script data-main="{% static 'js/boot.js' %}" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+<script data-main="{% static 'js/boot.js' %}" src="{% static 'js/vendor/require.js' %}"></script>
 </body>
 </html>

@@ -7,10 +7,14 @@
 		&:before {
 			&:extend( .ico );
 			content: @ico-user;
-			font-size: 20px;
+			font-size: 22px;
 			color: @accent-color;
-			vertical-align: top;
+			vertical-align: middle;
 			margin-top: -2px;
+			@media @device-sm-min {
+				vertical-align: top;
+				margin-top: -4px;
+			}
 		}
 	}
 

@@ -1,4 +1,5 @@
-define([ 'jquery', 'underscore', 'form', 'switch', 'owl' ], function ( $, _, Form, Switch ) {
+define([ 'jquery', 'underscore', 'form', 'catalogMenuDropdown', 'owl' ],
+	function ( $, _, Form, CatalogMenuDropdown ) {
 
 	var module = ( function () {
 
@@ -12,10 +13,9 @@ define([ 'jquery', 'underscore', 'form', 'switch', 'owl' ], function ( $, _, For
 	    App.prototype.init = function ()
 	    {
 	        var initialTime = $('#timer').data( 'time' );
-	        $( '.slider' ).addClass('owl-theme, owl-carousel').owlCarousel({
+	        $( '.slider' ).owlCarousel({
 	        	loop: true,
 	        	dots: true,
-	        	// dotsData: true,
     			navText: ['', ''],
     			nav: true,
 	        	items: 1
@@ -25,7 +25,7 @@ define([ 'jquery', 'underscore', 'form', 'switch', 'owl' ], function ( $, _, For
 	        	$( '.extra-menu' ).toggleClass( 'active--js' );
 	        })
 
-	        new Switch( { el: '.catalog-menu' } );
+	        new CatalogMenuDropdown( { el: '.catalog-menu' } );
 	        new Form({el: 'form'});
 
 	        if( initialTime )
